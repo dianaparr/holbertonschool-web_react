@@ -15,4 +15,12 @@ const teacher3: Teacher = {
     contract: false,
 };
 
-console.log(teacher3);
+//console.log(teacher3);
+
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => `${firstName.charAt(0)}. ${lastName}`;
+
+console.log(printTeacher("Diana", "Parra"));
