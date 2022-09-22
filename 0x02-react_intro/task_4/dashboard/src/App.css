@@ -1,0 +1,52 @@
+:root {
+  --main-color-holberton: #e1484c;
+}
+
+body {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+div {
+  padding: 2px 8px;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  border-bottom: 3px solid var(--main-color-holberton);
+}
+
+.App-header img {
+  width: 200px;
+}
+
+.App-header h1 {
+  margin: auto auto auto 0;
+  color: var(--main-color-holberton);
+}
+
+.App-body {
+  margin: 50px;
+}
+
+.App-body input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.App-footer {
+  border-top: 3px solid var(--main-color-holberton);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  font-style: italic;
+}
