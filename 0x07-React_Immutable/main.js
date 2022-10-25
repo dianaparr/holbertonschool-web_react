@@ -1,5 +1,23 @@
-import { map, map2 } from './4-mutations';
+import { concatElements, mergeElements } from './5-merge';
 
-console.log(map, map.toJS());
+const arr1 = ['houseOne', 'houseTwo'];
+const arr2 = ['houseThree', 'houseFour'];
 
-console.log(map2, map2.toJS());
+const obj1 = {
+    fear: true,
+    smell: -1033575916.9145899,
+    wall: false,
+    thing: -914767132,
+};
+const obj2 = {
+    1: 'Liam',
+    2: 'Noah',
+    3: 'Elijah',
+    4: 'Oliver',
+    5: 'Jacob',
+    6: 'Lucas',
+};
+
+console.log(concatElements(arr1, arr2), concatElements(arr1, arr2).toJS());
+
+console.log(mergeElements(obj1, obj2), mergeElements(obj1, obj2).toJS());
