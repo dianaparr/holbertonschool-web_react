@@ -1,13 +1,22 @@
 import { Map } from 'immutable';
-import areMapsEqual from './7-equality';
+import printBestStudents from './8-seq';
 
-const map1 = new Map({
-    firstName: 'Guillaume',
-    lastName: 'Salva',
-});
-const map2 = new Map({
-    firstName: 'Guillaume',
-    lastName: 'Salva',
-});
+const obj = {
+    1: {
+        score: 99,
+        firstName: 'guillaume',
+        lastName: 'salva',
+    },
+    2: {
+        score: 70,
+        firstName: 'Julien',
+        lastName: 'Barbier',
+    },
+    3: {
+        score: 69,
+        firstName: 'Sylvain',
+        lastName: 'Kalache',
+    },
+};
 
-console.log(areMapsEqual(map1, map2));
+printBestStudents(obj);
