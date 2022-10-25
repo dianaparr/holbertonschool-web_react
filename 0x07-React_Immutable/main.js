@@ -1,10 +1,13 @@
-import getImmutableObject from './1-map.js';
+import accessImmutableObject from './2-nested';
 
-const obj = {
-    fear: true,
-    smell: -1033575916.9145899,
-    wall: false,
-    thing: -914767132,
-};
+const obj = accessImmutableObject(
+    {
+        name: {
+            first: 'Guillaume',
+            last: 'Salva',
+        },
+    },
+    ['name', 'first']
+);
 
-console.log(getImmutableObject(obj));
+console.log(obj);
