@@ -1,13 +1,5 @@
-import accessImmutableObject from './2-nested';
+import { getListObject, addElementToList } from './3-list';
 
-const obj = accessImmutableObject(
-    {
-        name: {
-            first: 'Guillaume',
-            last: 'Salva',
-        },
-    },
-    ['name', 'first']
-);
+console.log(getListObject(['houseOne', 'houseTwo', 'houseThree']));
 
-console.log(obj);
+console.log(addElementToList(['houseOne', 'houseTwo', 'houseThree'], 'houseFour'));
