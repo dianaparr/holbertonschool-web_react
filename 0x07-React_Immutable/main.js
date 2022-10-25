@@ -1,23 +1,25 @@
-import { concatElements, mergeElements } from './5-merge';
+import mergeDeeplyElements from './6-deeply';
 
-const arr1 = ['houseOne', 'houseTwo'];
-const arr2 = ['houseThree', 'houseFour'];
-
-const obj1 = {
-    fear: true,
-    smell: -1033575916.9145899,
-    wall: false,
-    thing: -914767132,
-};
-const obj2 = {
-    1: 'Liam',
-    2: 'Noah',
-    3: 'Elijah',
-    4: 'Oliver',
-    5: 'Jacob',
-    6: 'Lucas',
+const page1 = {
+    'user-1': {
+        id: 1,
+        name: 'test',
+        likes: {
+            1: {
+                uid: 1234,
+            },
+        },
+    },
 };
 
-console.log(concatElements(arr1, arr2), concatElements(arr1, arr2).toJS());
+const page2 = {
+    'user-1': {
+        likes: {
+            2: {
+                uid: 134,
+            },
+        },
+    },
+};
 
-console.log(mergeElements(obj1, obj2), mergeElements(obj1, obj2).toJS());
+console.log(mergeDeeplyElements(page1, page2).toJS());
