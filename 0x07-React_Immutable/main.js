@@ -1,25 +1,13 @@
-import mergeDeeplyElements from './6-deeply';
+import { Map } from 'immutable';
+import areMapsEqual from './7-equality';
 
-const page1 = {
-    'user-1': {
-        id: 1,
-        name: 'test',
-        likes: {
-            1: {
-                uid: 1234,
-            },
-        },
-    },
-};
+const map1 = new Map({
+    firstName: 'Guillaume',
+    lastName: 'Salva',
+});
+const map2 = new Map({
+    firstName: 'Guillaume',
+    lastName: 'Salva',
+});
 
-const page2 = {
-    'user-1': {
-        likes: {
-            2: {
-                uid: 134,
-            },
-        },
-    },
-};
-
-console.log(mergeDeeplyElements(page1, page2).toJS());
+console.log(areMapsEqual(map1, map2));
