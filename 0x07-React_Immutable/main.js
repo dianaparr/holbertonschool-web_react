@@ -1,5 +1,5 @@
-import { getListObject, addElementToList } from './3-list';
+import { map, map2 } from './4-mutations';
 
-console.log(getListObject(['houseOne', 'houseTwo', 'houseThree']));
+console.log(map, map.toJS());
 
-console.log(addElementToList(['houseOne', 'houseTwo', 'houseThree'], 'houseFour'));
+console.log(map2, map2.toJS());
